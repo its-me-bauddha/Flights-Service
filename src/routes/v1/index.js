@@ -6,5 +6,6 @@ const airplaneRoutes = require('./airplane-routes');
 
 router.use('/airplanes',airplaneRoutes)
 router.get('/info',InfoController.info);
+router.get('/airplanes',airplaneRoutes);
 
 module.exports = router;

@@ -1,6 +1,6 @@
 "use strict";
 
-const { Op } = require('sequelize');
+const { Op } = require("sequelize");
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -18,15 +18,15 @@ module.exports = {
       {
         modelNumber: "airbus450",
         capacity: 400,
-        createdAt : new Date(),
-        updatedAt:new Date()
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
 
       {
         modelNumber: "airbus1222",
         capacity: 594,
-        createdAt : new Date(),
-        updatedAt:new Date()
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },
@@ -38,11 +38,8 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await queryInterface.bulkDelete('Airplanes' ,
-    {[Op.or]:
-      [
-        {modelNumber: "airbus1222"},
-        {modelNumber: "airbus450"}
-      ]})
+    await queryInterface.bulkDelete("Airplanes", {
+      [Op.or]: [{ modelNumber: "airbus1222" }, { modelNumber: "airbus450" }],
+    });
   },
 };
