@@ -15,7 +15,7 @@ console.log("inside get ")
 router.get("/", AirplaneController.getAirplanes);
 router.get("/:id" ,AirplaneController.getAirplane);
 router.delete('/:id',AirplaneController.destroyAirplane);
-router.post('/:id',AirplaneController.updateAirplane);
+router.patch('/:id',AirplaneController.updateAirplane);
 
 module.exports = router;
  
