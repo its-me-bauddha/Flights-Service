@@ -18,11 +18,10 @@ module.exports = {
         allowNull:false,
         references:{
           model:'Airplanes',
-         key:'id'
+          key:'id'
         },
         onDelete:'CASCADE',
-      
-
+       
       },
       departureAirportId: {
         type: Sequelize.STRING,
