@@ -11,7 +11,7 @@ router.post(
   AirplaneMiddlewares.validateCreateRequest,
   AirplaneController.createAirplane
 );
-console.log("inside get ")
+
 router.get("/", AirplaneController.getAirplanes);
 router.get("/:id" ,AirplaneController.getAirplane);
 router.delete('/:id',AirplaneController.destroyAirplane);
