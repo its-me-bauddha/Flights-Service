@@ -1,16 +1,17 @@
 const express = require("express");
 
-const { FlightController } = require("../../controllers");
-const { FlightMiddlewares } = require("../../middlewares");
+const { FlightController} = require("../../controllers");
+const { FlightMiddlewares} = require("../../middlewares");
 
 const router = express.Router();
 
 // /api/v1/airplanes POST
 router.post(
   "/",
-  FlightMiddlewares.validateCreateRequest,
+   FlightMiddlewares.validateCreateRequest,
   FlightController.createFlight
 );
+router.get('/',FlightController.getAllFlights)
 
 // router.get("/", AirportController.getAirports);
 // router.get("/:id", AirportController.getAirport);
