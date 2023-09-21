@@ -11,9 +11,16 @@ router.post(
    FlightMiddlewares.validateCreateRequest,
   FlightController.createFlight
 );
-router.get('/',FlightController.getAllFlights)
-router.get('/:id',FlightController.getFlight)
+router.get('/',FlightController.getAllFlights);
+router.get('/:id',FlightController.getFlight);
 
+
+// /api/v1/flights/:id/seats  PATCH
+router.patch('/:id/seats',
+            FlightMiddlewares.validateUpdateSeatsRequest,
+              FlightController.updateSeats
+
+)
 
 // router.get("/", AirportController.getAirports);
 // router.get("/:id", AirportController.getAirport);
